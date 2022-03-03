@@ -37,9 +37,11 @@ Ideally, choose a Russian IP, so you have fewer chances to be blocked.
 
 ## List of targets
 
-1. [endpoints.txt](./endpoints.txt)
-2. https://incourse.trade/sites.php
-3. https://ddosmonitor.herokuapp.com
+- [Banks and financial services](./targets/banks.txt)
+- [Media propaganda resources](./targets/media.txt) 
+- [Governmental and state resources](./targets/state.txt)
+- [Business corporations](./targets/corporations.txt)
+- [Other unsorted](./targets/unsorted.txt) (feel free to contribute)
 
 ## Checking availability
 
@@ -63,7 +65,9 @@ You can check the availability of target resources using these websites:
 1. Install [Docker Desktop](https://www.docker.com/products/docker-desktop)
 2. Open Terminal
 3. Download `bombardier.sh`
-4. Run `sudo chmod +x bombardier.sh && ./bombardier.sh`
+4. Run `sudo chmod +x bombardier.sh`
+5. Run `./bombardier.sh` to attack all targets
+6. Run `./bombardier.sh banks` to attack specific category targets (see [targets](./targets))
 
 ## Browser-based
 
