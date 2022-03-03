@@ -50,7 +50,7 @@ You can check the availability of target resources using these websites:
 - https://check-host.net/check-ping
 - https://ddosmonitor.herokuapp.com
 
-## Tools
+## DDoS Tools
 
 ### Docker (single-website attack)
 
@@ -69,9 +69,9 @@ You can check the availability of target resources using these websites:
 5. Run `./bombardier.sh` to attack all targets
 6. Run `./bombardier.sh banks` to attack specific category targets (see [targets](./targets))
 
-## Browser-based
+## Browser-based DDoS
 
-These are client-based DDoS tools. They use your machine resources (CPU and memory).
+This approach doesn't require any technical knowledge, simply open the website and follow instructions.
 
 - https://attack-ui.vercel.app/attack/ddos/start ([instructions](https://destiny-jumbo-8c6.notion.site/Attack-UI-5aebc8eaedcc47448b6d79fc4243d141))
 - https://nowarukraine.online/
