@@ -47,6 +47,7 @@ Ideally, choose a Russian IP, so you have fewer chances to be blocked.
 
 You can check the availability of target resources using these websites:
 
+- https://globalcheck.net/ru
 - https://check-host.net/check-ping
 - https://ddosmonitor.herokuapp.com
 
@@ -92,6 +93,7 @@ You can check the availability of target resources using these websites:
 This approach doesn't require any technical knowledge, simply open the website and follow instructions.
 
 - https://attack-ui.vercel.app/attack/ddos/start ([instructions](https://destiny-jumbo-8c6.notion.site/Attack-UI-5aebc8eaedcc47448b6d79fc4243d141))
+- http://www.notwar.ho.ua/
 - https://nowarukraine.online/
 - https://vug.pl/takeRussiaDown.html
 - https://cyber-yozh.com/
